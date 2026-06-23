@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beautiful Alert Button</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background: #ff6f61;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff3b2f;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="showAlert()">Click Me 🎉</button>
+
+    <script>
+        function showAlert() {
+            alert("✨ Welcome! You just clicked a stylish button!");
+        }
+    </script>
+
+</body>
+</html>

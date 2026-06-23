@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text using DOM</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f8ff;
+        }
+
+        #text {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #2e7d32;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="text">Hello! I will change when you click the button 😊</div>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("text").innerHTML =
+                "🎉 Text changed successfully using DOM!";
+        }
+    </script>
+
+</body>
+</html>
