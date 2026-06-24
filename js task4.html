@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Event Listener</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #1d2671, #c33764);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: white;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background: #00ffd5;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+      background: #ffeb3b;
+      transform: scale(1.1);
+    }
+
+    #msg {
+      margin-top: 30px;
+      font-size: 22px;
+      display: none;
+      color: #ffeb3b;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn">Click Me</button>
+  <div id="msg">✨ Button Clicked Successfully! ✨</div>
+
+  <script>
+    const button = document.getElementById("btn");
+    const message = document.getElementById("msg");
+
+    button.addEventListener("click", function () {
+      message.style.display = "block";
+      message.style.animation = "fadeIn 1s";
+      document.body.style.background =
+        "linear-gradient(to right, #00c6ff, #0072ff)";
+    });
+  </script>
+
+</body>
+</html>

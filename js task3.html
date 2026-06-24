@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Validation</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      font-size: 16px;
+      background: #00e676;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1de9b6;
+      transform: scale(1.1);
+    }
+
+    #error {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Username Validation</h2>
+    <input type="text" id="name" placeholder="Enter username">
+    <br>
+    <button onclick="validate()">Submit</button>
+    <div id="error"></div>
+  </div>
+
+  <script>
+    function validate() {
+      const name = document.getElementById("name").value;
+      const error = document.getElementById("error");
+
+      if (name === "") {
+        error.innerHTML = "❌ Field cannot be empty!";
+        error.style.color = "#ff1744";
+      } 
+      else if (name.length < 5) {
+        error.innerHTML = "⚠️ Minimum 5 characters required!";
+        error.style.color = "#ff9100";
+      } 
+      else {
+        error.innerHTML = "✅ Valid Username!";
+        error.style.color = "#00e676";
+      }
+    }
+  </script>
+
+</body>
+</html>
